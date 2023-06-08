@@ -2,6 +2,8 @@ import React from "react";
 import Article from "./Article";
 
 export default function ArticleList({ posts }) {
-  const post = posts.map((post) => <Article key={post.id} post={post} />);
+  const post = posts.map((post) => (
+    <Article key={post.id} title={post.title} date={post.date} preview={post.preview} minutes={post.minutes} />
+  ));
   return <main>{post}</main>;
 }
